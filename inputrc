@@ -1,0 +1,9 @@
+# settings
+set bell-style none
+set completion-ignore-case on
+set meta-flag on
+set convert-meta off
+set output-meta on
+set input-meta on
+set bind-tty-special-chars off
+set blink-matching-paren on
