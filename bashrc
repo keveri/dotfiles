@@ -1,5 +1,3 @@
-# .bashrc
-
 # if not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
@@ -63,9 +61,4 @@ calc() {
 }
 
 # local configurations
-[[ -f $HOME/.local.sh ]] && source $HOME/.local.sh
-
-# Source global definitions
-#if [ -f /etc/bashrc ]; then
-#	. /etc/bashrc
-#fi
+[[ -f $HOME/.bashrc.local ]] && source $HOME/.bashrc.local
