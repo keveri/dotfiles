@@ -26,8 +26,14 @@ if has("unnamedplus")
     set clipboard+=unnamedplus
 endif 
 
+set ofu=syntaxcomplete#Complete
+set completeopt=menuone,longest,preview
 set complete+=kspell " autocomplete with dictionary words when spell check is on
+
 set wildignore+=.git/**,build/**,dist/**,log/**,target/**
+set wildignore+=*.so,*.dll,*.o,*.a,*.obj,*.exe,*.pyc,*.class
+set wildignore+=.git,.hg,.svn
+set wildignore+=*.bak,*.swp,.DS_Store,*.tmp,*~
 set wildmenu " show a navigable menu for tab completion
 set wildmode=longest,list,full " complete only until point of ambiguity
 set wildchar=<TAB> " Character for CLI expansion (TAB-completion)
@@ -73,7 +79,6 @@ set encoding=utf8 nobomb " use UTF-8 without BOM
 set splitbelow " new window goes below
 set splitright " new window goes right
 
-set pastetoggle=<leader>p " toggle paste mode
 set backspace=indent,eol,start " allow backspace in insert mode
 
 set history=1000 " increase history from default 20
@@ -114,6 +119,12 @@ nnoremap <leader>* :%s/\<<C-r><C-w>\>//<Left>
 vnoremap <leader>* "hy:%s/\V<C-r>h//<left>
 " remap :W to :w
 command! W w
+" Copy/paste
+vnoremap <Leader>c "+y
+nnoremap <Leader>v "+p
+" Toggles
+nnoremap <Leader>tp :setl paste! paste?<cr>
+nnoremap <Leader>tn :set number!<cr>
 
 
 " Automatic commands
