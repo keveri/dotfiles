@@ -44,21 +44,5 @@ alias ll='ls -lh'
 alias la='ls -lah'
 alias grep='grep --color=auto'
 
-
-# functions
-
-httpserver() {
-    local curdir="$PWD"
-    local port=${1:-10101}
-    local dir=${2:-.}
-    cd "$dir"
-    python -m SimpleHTTPServer "$port"
-    cd "$curdir"
-}
-
-calc() {
-    echo "${@}" | bc -l
-}
-
 # local configurations
 [[ -f $HOME/.bashrc.local ]] && source $HOME/.bashrc.local
