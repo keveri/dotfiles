@@ -123,8 +123,8 @@ command! W w
 vnoremap <Leader>c "+y
 nnoremap <Leader>v "+p
 " Toggles
-nnoremap <Leader>tp :setl paste! paste?<cr>
-nnoremap <Leader>tn :set number!<cr>
+nnoremap <Leader>p :setl paste! paste?<cr>
+nnoremap <Leader>n :set number!<cr>
 
 
 " Automatic commands
