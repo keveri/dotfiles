@@ -9,11 +9,9 @@ bind -m vi-insert "\C-l":clear-screen
 
 # prompt
 PROMPT_COMMAND='hasjobs=$(jobs -p)'
-export PS1='[\u@\h \w]\
+export PS1='[$(date +%H%M) \u@\h \w]\
 ${hasjobs:+(\j)} \
-\[\033[38;5;196m\]>\
-\[\033[38;5;226m\]>\
-\[\033[38;5;46m\]>\
+\[\033[38;5;46m\]$\
 \[$(tput sgr0)\] '
 
 # exports
