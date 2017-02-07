@@ -73,8 +73,14 @@ set ttyfast " optimize for fast terminal connections
 
 set t_Co=256 " enable full-color support
 set background=dark " use colors that look good on dark bg
-colorscheme default
+colorscheme solarized8_dark
 set encoding=utf8 nobomb " use UTF-8 without BOM
+
+if has("termguicolors")
+  set termguicolors
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
 
 set splitbelow " new window goes below
 set splitright " new window goes right
@@ -125,6 +131,10 @@ nnoremap <Leader>v "+p
 " Toggles
 nnoremap <Leader>p :setl paste! paste?<cr>
 nnoremap <Leader>n :set number!<cr>
+nnoremap <leader>b :<c-u>exe "colors" (g:colors_name =~# "dark"
+  \ ? substitute(g:colors_name, 'dark', 'light', '')
+  \ : substitute(g:colors_name, 'light', 'dark', '')
+  \ )<cr>
 
 
 " Automatic commands
