@@ -1,0 +1,5 @@
+st
+unclutter
+xclip
+terminus-fonts
+redshift
