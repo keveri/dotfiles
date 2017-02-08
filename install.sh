@@ -1,5 +1,8 @@
 #!/bin/sh
 # original source: https://github.com/jkpl/dotfiles/
+#
+# CURRENTLY NOT IN USE
+#
 
 DOTFILES="
 bashrc
@@ -47,12 +50,14 @@ install_gitconfig() {
     fi
 }
 
-log "Installing dotfiles to $HOME"
+#log "Installing dotfiles to $HOME"
 
 # install dotfiles
-for dotfile in $DOTFILES; do
-    install_dotfile "$dotfile"
-done
+#for dotfile in $DOTFILES; do
+#    install_dotfile "$dotfile"
+#done
 
 # install gitconfig
-install_gitconfig
+#install_gitconfig
+
+echo "Currently not in use, use 'make' instead."
