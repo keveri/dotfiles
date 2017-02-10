@@ -15,16 +15,18 @@ ${hasjobs:+(\j)} \
 \[$(tput sgr0)\] '
 
 # exports
-export PAGER=less
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+export PAGER="less"
 export EDITOR="vim"
 export VISUAL="$EDITOR"
 export PATH="$HOME/bin:$PATH"
 
 # history
 HISTCONTROL=ignoreboth
-HISTIGNORE='bg:fg:history'
-HISTSIZE=100000
-HISTFILESIZE=100000
+HISTIGNORE="bg:fg:history"
+HISTSIZE=10000
+HISTFILESIZE=10000
 
 # shopts
 shopt -s checkwinsize
@@ -37,10 +39,10 @@ shopt -s direxpand
 stty -ixon
 
 # aliases
-alias ls='ls --color=auto -F'
-alias ll='ls -lh'
-alias la='ls -lah'
-alias grep='grep --color=auto'
+alias ls="ls --color=auto -F"
+alias ll="ls -lh"
+alias la="ls -lah"
+alias grep="grep --color=auto"
 
 # local configurations
-[[ -f $HOME/.bashrc.local ]] && source $HOME/.bashrc.local
+[[ -f "$HOME/.bashrc.local" ]] && source "$HOME/.bashrc.local"
