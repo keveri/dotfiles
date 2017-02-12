@@ -12,6 +12,7 @@ vimrc
 LINUX_ONLY="
 config/i3
 config/redshift.conf
+fonts/fontawesome-webfont.ttf
 "
 
 BASEDIR="$(dirname "$0")"
@@ -61,6 +62,7 @@ install_multiplatform() {
 
 install_linux_only() {
     mkdir -p "$HOME/.config"
+    mkdir -p "$HOME/.fonts"
     for file in $LINUX_ONLY; do
         symlink "$file"
     done
