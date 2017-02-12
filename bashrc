@@ -44,5 +44,8 @@ alias ll="ls -lh"
 alias la="ls -lah"
 alias grep="grep --color=auto"
 
+# bin path
+PATH="$PATH:$HOME/bin"
+
 # local configurations
 [[ -f "$HOME/.bashrc.local" ]] && source "$HOME/.bashrc.local"

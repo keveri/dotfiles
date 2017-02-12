@@ -66,6 +66,11 @@ install_linux_only() {
     for file in $LINUX_ONLY; do
         symlink "$file"
     done
+    if [ ! -e "$HOME/bin" ]; then
+        ln -sv "$BASEDIR/bin" "$HOME/bin"
+    else
+        echo "$HOME/bin already exists!"
+    fi
 }
 
 print_help() {
@@ -84,12 +89,12 @@ case "$1" in
       install_multiplatform
       install_gitconfig
       install_linux_only
-      ;; 
+      ;;
     "multi")
       install_multiplatform
       install_gitconfig
-      ;; 
+      ;;
    *)
       print_help
-      ;; 
-esac 
+      ;;
+esac
