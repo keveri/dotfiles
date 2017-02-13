@@ -3,3 +3,5 @@ unclutter
 xclip
 terminus-fonts
 redshift
+# Moka icon theme
+arc-theme

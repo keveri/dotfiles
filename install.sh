@@ -13,6 +13,8 @@ LINUX_ONLY="
 config/i3
 config/redshift.conf
 fonts/fontawesome-webfont.ttf
+gtkrc-2.0
+config/gtk-3.0/settings.ini
 "
 
 BASEDIR="$(dirname "$0")"
@@ -61,7 +63,7 @@ install_multiplatform() {
 }
 
 install_linux_only() {
-    mkdir -p "$HOME/.config"
+    mkdir -p "$HOME/.config/gtk-3.0"
     mkdir -p "$HOME/.fonts"
     for file in $LINUX_ONLY; do
         symlink "$file"
