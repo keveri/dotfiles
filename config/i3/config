@@ -13,6 +13,7 @@ set $white_text      "#ffffff"
 set $less_white_text "#cccccc"
 set $dark_grey       "#191919"
 set $urgent_red      "#ae4544"
+set $dark_green      "#208075"
 
 # status bar
 bar {
@@ -56,7 +57,7 @@ set $mod Mod4
 bindsym $mod+Return exec st -f \\"Terminus:10\\" || i3-sensible-terminal
 
 # start dmenu
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec dmenu_run -l 10 -fn Terminus -p exec -nb $dark_grey -nf $less_white_text -sb $dark_green -sf $white_text
 
 # lock screen
 bindsym $mod+Control+l exec i3lock -c 000000
