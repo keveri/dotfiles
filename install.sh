@@ -12,10 +12,11 @@ vimrc
 LINUX_ONLY="
 config/i3
 config/redshift.conf
-fonts/fontawesome-webfont.ttf
-gtkrc-2.0
-config/gtk-3.0/settings.ini
-config/wallpapers/cb.jpg
+config/wallpapers/
+config/ranger/
+config/termite/
+xinitrc
+xprofile
 "
 
 BASEDIR="$(dirname "$0")"
@@ -64,9 +65,6 @@ install_multiplatform() {
 }
 
 install_linux_only() {
-    mkdir -p "$HOME/.config/gtk-3.0"
-    mkdir -p "$HOME/.config/wallpapers"
-    mkdir -p "$HOME/.fonts"
     for file in $LINUX_ONLY; do
         symlink "$file"
     done

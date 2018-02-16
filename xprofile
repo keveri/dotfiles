@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# home monitor
+dp2=`xrandr | grep DP2 | awk '{print $2}'`
+if [ "$dp2" = 'connected' ]; then
+  xrandr --output DP2 --auto --primary --output LVDS1 --off
+fi
+
+setxkbmap -layout us -variant altgr-intl -option ctrl:nocaps
+feh --randomize --bg-scale ~/.config/wallpapers/*
+
+pulseaudio --start &
+xss-lock -- i3lock -n -c 000000 &
+redshift &
+eval $(ssh-agent)

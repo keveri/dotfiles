@@ -5,8 +5,7 @@
 #font pango:monospace 8
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
-font pango:Terminus 8
+font Terminus 8
 
 ## colors
 set $white_text      "#ffffff"
@@ -43,36 +42,23 @@ client.background       #ffffff
 
 
 # -----------------------------------------------------------------------------
-# AUTORUN
-
-# wallpaper
-exec --no-startup-id feh --randomize --bg-scale ~/.config/wallpapers/*
-
-# hide inactive mouse
-# FIXME: this messes up i3...
-#exec --no-startup-id unclutter
-
-# redshift for evenings
-exec --no-startup-id redshift
-
-
-# -----------------------------------------------------------------------------
 # SHORTCUTS
 
 # mod key
 set $mod Mod4
 
 # start a terminal
-bindsym $mod+Return exec st -f \\"Terminus:10\\" || i3-sensible-terminal
+bindsym $mod+Return exec termite || i3-sensible-terminal
 
 # start dmenu
-bindsym $mod+d exec dmenu_run -l 10 -fn Terminus -p exec -nb $dark_grey -nf $less_white_text -sb $dark_green -sf $white_text
+bindsym $mod+d exec dmenu_run -l 10 -fn "xos4 Terminus-10" -p exec -nb $dark_grey -nf $less_white_text -sb $dark_green -sf $white_text
 
 # lock screen
 bindsym $mod+Control+l exec i3lock -c 000000
 
-# sleep
-bindsym $mod+Control+s exec i3lock -c 000000 && systemctl suspend
+# hibernate and suspend
+bindsym $mod+Control+h exec systemctl hibernate
+bindsym $mod+Control+s exec systemctl suspend
 
 # volume control
 bindcode 121 exec --no-startup-id amixer set Master toggle -q
@@ -157,8 +143,8 @@ bindsym $mod+a focus child
 # WORKSPACES
 
 # names
-set $ws1  "1 "
-set $ws2  "2 "
+set $ws1  "1"
+set $ws2  "2"
 set $ws3  "3"
 set $ws4  "4"
 set $ws5  "5"
