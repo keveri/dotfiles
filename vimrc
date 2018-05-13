@@ -62,7 +62,7 @@ set laststatus=2 " always display the status line
 set ruler " show the cursor position all the time
 set number " show line numbers
 set showcmd " display incomplete commands
-set colorcolumn=80 " show color on this column
+"set colorcolumn=80 " show color on this column
 set mousehide " Hide mouse pointer while typing
 
 set list " show trailing whitespace
