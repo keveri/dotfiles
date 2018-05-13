@@ -12,11 +12,11 @@ vimrc
 LINUX_ONLY="
 config/i3
 config/redshift.conf
-config/wallpapers/
-config/ranger/
-config/termite/
-config/nvim/
-config/xmonad/
+config/wallpapers
+config/ranger
+config/termite
+config/nvim
+config/xmonad
 xmobarrc
 xinitrc
 xprofile
