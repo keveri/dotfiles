@@ -15,8 +15,12 @@ config/redshift.conf
 config/wallpapers/
 config/ranger/
 config/termite/
+config/nvim/
+config/xmonad/
+xmobarrc
 xinitrc
 xprofile
+Xmodmap
 "
 
 BASEDIR="$(dirname "$0")"
